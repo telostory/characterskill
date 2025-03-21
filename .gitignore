@@ -19,4 +19,7 @@ Thumbs.db
 .env.local
 .env.development.local
 .env.test.local
-.env.production.local 
+.env.production.local
+
+# 비공개 콘텐츠
+캐릭터스킬 원고 
