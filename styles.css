@@ -114,7 +114,7 @@ p {
 
 /* 헤더 */
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('abstract_gradient.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('hero_graphic.jpg');
     background-size: cover;
     background-position: center;
     color: white;
