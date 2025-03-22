@@ -24,11 +24,17 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -46,6 +52,7 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    overflow-x: hidden;
 }
 
 .section {
@@ -598,11 +605,28 @@ footer {
     transition: all 0.3s ease;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 .btn-publy:hover {
     background-color: var(--accent-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.read-more-link {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.read-more-link p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.read-more-link .btn-publy {
+    max-width: 400px;
 } 
