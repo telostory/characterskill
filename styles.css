@@ -426,6 +426,8 @@ footer {
     background-color: #4a6a8e;
     color: white;
     padding: 50px 0 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .footer-content {
@@ -434,6 +436,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    max-width: 100%;
 }
 
 .footer-logo {
