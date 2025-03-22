@@ -485,9 +485,14 @@ cite {
 .read-more-link p {
     margin: 0;
     font-size: 1.1rem;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     font-weight: 500;
     color: var(--text-color);
+}
+
+.read-more-link .btn-publy {
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .read-more-link a {
