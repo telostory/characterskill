@@ -224,7 +224,7 @@ nav {
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 20px auto;
     position: static;
     height: auto;
@@ -237,22 +237,23 @@ nav {
     bottom: auto;
     width: 100%;
     text-align: center;
-    padding: 15px 10px;
+    padding: 18px 10px;
     border-radius: 4px;
     color: white;
     font-weight: 500;
     box-sizing: border-box;
+    font-size: 1.1rem;
 }
 
 .pyramid-level.top {
-    width: 70%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--secondary-color);
 }
 
 .pyramid-level.middle {
-    width: 85%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--primary-light);
@@ -608,6 +609,10 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .skill-pyramid {
+        max-width: 450px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -648,12 +653,21 @@ footer {
         padding: 0 10px;
     }
     
+    .skill-pyramid {
+        max-width: 100%;
+    }
+    
+    .pyramid-level {
+        padding: 15px 10px;
+        font-size: 1rem;
+    }
+    
     .pyramid-level.top {
-        width: 80%;
+        width: 75%;
     }
     
     .pyramid-level.middle {
-        width: 90%;
+        width: 87%;
     }
 }
 
