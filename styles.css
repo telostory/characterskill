@@ -208,14 +208,58 @@ nav {
 
 .more-info {
     margin-top: 25px;
-    padding: 10px 15px;
-    background-color: var(--background-alt);
-    border-left: 3px solid var(--primary-color);
+    padding: 15px 20px;
+    background-color: rgba(74, 160, 78, 0.1);
+    border-left: 4px solid var(--primary-color);
     border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.more-info:hover {
+    background-color: rgba(74, 160, 78, 0.15);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.more-info-text {
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.more-info-text i {
+    color: var(--primary-color);
 }
 
 .more-info a {
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--primary-dark);
+    position: relative;
+    padding-right: 22px;
+    display: inline-block;
+}
+
+.more-info a:after {
+    content: '\f35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+}
+
+.more-info a:hover {
+    color: var(--secondary-color);
+}
+
+.more-info a:hover:after {
+    transform: translateX(3px);
 }
 
 /* 피라미드 스타일 재구성 */
@@ -401,66 +445,95 @@ nav {
 
 /* 인용구 섹션 */
 .quote {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 40px;
-    position: relative;
-    background: linear-gradient(to right, rgba(74, 160, 78, 0.03), rgba(232, 185, 9, 0.05), rgba(74, 160, 78, 0.03));
+    background-color: var(--background-alt);
+    padding: 30px;
     border-radius: 10px;
-}
-
-.quote::before {
-    content: '"';
-    font-size: 8rem;
-    position: absolute;
-    top: -20px;
-    left: 0;
-    color: rgba(74, 160, 78, 0.1);
-    font-family: Georgia, serif;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 blockquote {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
+    font-size: 1.2rem;
     font-style: italic;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+}
+
+blockquote:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
 cite {
-    font-style: normal;
+    display: block;
+    margin-top: 15px;
     font-weight: 500;
-    color: var(--text-light);
+    text-align: right;
 }
 
-/* 더 읽기 링크 스타일 */
 .read-more-link {
     text-align: center;
-    margin-top: 40px;
-    padding: 15px;
-    background: linear-gradient(to right, var(--background-alt), rgba(232, 185, 9, 0.05), var(--background-alt));
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: rgba(232, 185, 9, 0.1);
+    border-radius: 8px;
+    transition: var(--transition);
+    border: 1px solid rgba(232, 185, 9, 0.2);
+}
+
+.read-more-link:hover {
+    background-color: rgba(232, 185, 9, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .read-more-link p {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.read-more-link p i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 .read-more-link a {
-    font-weight: 500;
-    color: var(--primary-color);
-    border-bottom: 1px solid;
-    padding-bottom: 2px;
+    font-weight: 600;
+    color: var(--secondary-dark);
+    padding: 0 5px;
+    position: relative;
+    transition: var(--transition);
 }
 
 .read-more-link a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-dark);
+}
+
+.read-more-link a:after {
+    content: '\f35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.read-more-link a:hover:after {
+    transform: translateX(3px);
 }
 
 /* 문의 섹션 */
@@ -507,43 +580,69 @@ input:focus, textarea:focus {
 
 /* 푸터 */
 footer {
-    background-color: #2a4a2d;
+    background-color: #294d2b;
     color: white;
-    padding: 60px 0 20px;
+    padding: 50px 0 20px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .footer-logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-links a {
     color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
     transition: var(--transition);
 }
 
 .footer-links a:hover {
-    color: var(--secondary-color);
+    color: white;
+}
+
+.footer-links a[href*="publy"] {
+    color: var(--secondary-light);
+    font-weight: 600;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-links a[href*="publy"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-links a[href*="publy"]:after {
+    content: '\f35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 0.8em;
 }
 
 .copyright {
     text-align: center;
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* 반응형 스타일 */
@@ -721,4 +820,69 @@ blockquote {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.btn-publy {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #fff !important;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.btn-publy:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-publy i {
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.btn-publy:hover i {
+    transform: translateX(4px);
+}
+
+.btn-publy-alt {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 10px rgba(232, 185, 9, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-publy-alt:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-publy-alt:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(232, 185, 9, 0.4);
+    color: white;
+}
+
+.btn-publy-alt:hover:before {
+    left: 100%;
 } 
