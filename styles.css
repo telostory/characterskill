@@ -209,36 +209,39 @@ nav {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 .pyramid-level {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
     border-radius: 4px;
     color: white;
     font-weight: 500;
-}
-
-.pyramid-level.bottom {
-    bottom: 0;
     width: 100%;
-    background-color: var(--primary-color);
-}
-
-.pyramid-level.middle {
-    bottom: 33%;
-    width: 80%;
-    background-color: #6d83ff;
 }
 
 .pyramid-level.top {
-    bottom: 66%;
     width: 60%;
-    background-color: #8fa0ff;
+    background-color: var(--secondary-color);
+    z-index: 3;
+}
+
+.pyramid-level.middle {
+    width: 80%;
+    background-color: var(--primary-light);
+    z-index: 2;
+}
+
+.pyramid-level.bottom {
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1;
 }
 
 /* 스킬 섹션 */
@@ -491,8 +494,9 @@ footer {
     }
     
     .skill-pyramid {
-        height: 330px;
         margin: 30px auto;
+        height: auto;
+        gap: 15px;
     }
 }
 
@@ -524,23 +528,11 @@ footer {
     }
     
     .skill-pyramid {
-        height: 360px;
+        gap: 12px;
     }
     
     .pyramid-level {
-        padding: 15px;
-    }
-    
-    .pyramid-level.top {
-        bottom: 66%;
-    }
-    
-    .pyramid-level.middle {
-        bottom: 33%;
-    }
-    
-    .pyramid-level.bottom {
-        bottom: 0;
+        padding: 15px 10px;
     }
 }
 
@@ -558,42 +550,20 @@ footer {
     }
     
     .skill-pyramid {
-        height: 400px;
+        gap: 10px;
+    }
+    
+    .pyramid-level {
+        padding: 12px 10px;
     }
     
     .pyramid-level.top {
-        bottom: 66%;
         width: 65%;
     }
     
     .pyramid-level.middle {
-        bottom: 33%;
         width: 82%;
     }
-    
-    .pyramid-level.bottom {
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-.pyramid-level.top {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--secondary-color);
-}
-
-.pyramid-level.middle {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--primary-light);
-}
-
-.pyramid-level.bottom {
-    width: 100%;
-    background-color: var(--primary-color);
 }
 
 .more-info {
