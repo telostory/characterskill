@@ -443,6 +443,7 @@ nav {
     border-radius: 10px;
     position: relative;
     margin-bottom: 30px;
+    border-left: 4px solid var(--primary-color);
 }
 
 blockquote {
@@ -454,14 +455,7 @@ blockquote {
 }
 
 blockquote:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background-color: var(--primary-color);
-    border-radius: 2px;
+    content: none;
 }
 
 cite {
@@ -476,16 +470,14 @@ cite {
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
-    background-color: rgba(232, 185, 9, 0.1);
-    border-left: 4px solid var(--secondary-color);
-    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
     transition: var(--transition);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
 .read-more-link:hover {
-    background-color: rgba(232, 185, 9, 0.15);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
 }
