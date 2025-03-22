@@ -489,6 +489,11 @@ footer {
     .tagline {
         font-size: 1.3rem;
     }
+    
+    .skill-pyramid {
+        height: 330px;
+        margin: 30px auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -517,6 +522,26 @@ footer {
         gap: 30px;
         text-align: center;
     }
+    
+    .skill-pyramid {
+        height: 360px;
+    }
+    
+    .pyramid-level {
+        padding: 15px;
+    }
+    
+    .pyramid-level.top {
+        bottom: 66%;
+    }
+    
+    .pyramid-level.middle {
+        bottom: 33%;
+    }
+    
+    .pyramid-level.bottom {
+        bottom: 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -530,6 +555,25 @@ footer {
     
     .tagline {
         font-size: 1.1rem;
+    }
+    
+    .skill-pyramid {
+        height: 400px;
+    }
+    
+    .pyramid-level.top {
+        bottom: 66%;
+        width: 65%;
+    }
+    
+    .pyramid-level.middle {
+        bottom: 33%;
+        width: 82%;
+    }
+    
+    .pyramid-level.bottom {
+        bottom: 0;
+        width: 100%;
     }
 }
 
